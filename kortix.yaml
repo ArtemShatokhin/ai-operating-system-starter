@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=https://kortix.com/schema/kortix.v2.schema.json
+#
+# An example company (acme-co) run as an AI operating system.
+#
+# The governance rule this manifest is built on:
+# The project REGISTERS what exists (skills, tools, commands, extensions,
+# connectors, secrets). Each AGENT decides: its prompt, model and permission,
+# and which registered things it enables, by name. Nothing applies to every
+# agent by itself, and an agent sees only what it enables.
+#
+# Adapted from the Kortix starter manifest, which is the authority for the
+# schema:
+# https://github.com/kortix-ai/suna/blob/dev/packages/starter/templates/base/kortix.yaml
+
+kortix_version: 2
+
+default_agent: kortix
+
+project:
+  name: acme-co
+  description: An example company run as an AI operating system.
+
+env:
+  required: []
+  optional: [STRIPE_API_KEY]
+
+agents:
+  kortix:
+    file: agents/kortix.md
+  ops-reporter:
+    file: agents/ops-reporter.md
+    connectors: []
+  support-triage:
+    file: agents/support-triage.md
+    connectors: []
+  code-fixer:
+    file: agents/code-fixer.md
+    connectors: []
+
+triggers:
+  - slug: daily-ops-digest
+    type: cron
+    cron: '0 9 * * 1-5'
+    prompt: Summarize yesterday's support tickets and open a change request with the digest.
