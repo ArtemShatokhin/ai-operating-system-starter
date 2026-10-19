@@ -103,4 +103,4 @@ Fork the repo first so the GitHub origin points at a repository you own. The ful
 
 ## The system underneath
 
-This repo runs on [Kortix](https://kortix.com), the open-source AI Operating System. The code is on [Kortix on GitHub](https://github.com/kortix-ai/suna). Open source. Read it, fork it, audit it. Run it on Kortix Cloud, in your VPC, or on your own on-prem network. Self-host is free. If you want Kortix next to the rest of the open-source field, opensourceaioperatingsystem.com keeps the comparison in one place.
+This repo runs on [Kortix](https://kortix.com), the open-source AI Operating System. The code is on [Kortix on GitHub](https://github.com/kortix-ai/suna). Open source. Read it, fork it, audit it. Run it on Kortix Cloud, in your VPC, or on your own on-prem network. Self-host is free. If you want Kortix next to the rest of the open-source field, opensourceaioperatingsystem.com keeps the comparison in one place, and [an AI operating system for companies](https://opensourceaioperatingsystem.com/ai-operating-system-for-companies) shows what this repo holds once more than one team runs on it.
